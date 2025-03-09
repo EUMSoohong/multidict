@@ -55,10 +55,10 @@
             let query = document.getElementById("search-input").value.trim();
             if (query) {
                 const encodedQuery = encodeURIComponent(query);
-                document.getElementById("frame-en").src = `https://en.dict.naver.com/#/search?query=${encodedQuery}`;
-                document.getElementById("frame-ja").src = `https://ja.dict.naver.com/#/search?query=${encodedQuery}`;
-                document.getElementById("frame-zh").src = `https://zh.dict.naver.com/#/search?query=${encodedQuery}`;
-                document.getElementById("frame-esko").src = `https://dict.naver.com/eskodict/#/search?query=${encodedQuery}`;
+                document.getElementById("frame-en").src = `https://en.dict.naver.com/#/mini/search?query=${encodedQuery}`;
+                document.getElementById("frame-ja").src = `https://ja.dict.naver.com/#/mini/search?query=${encodedQuery}`;
+                document.getElementById("frame-zh").src = `https://zh.dict.naver.com/#/mini/search?query=${encodedQuery}`;
+                document.getElementById("frame-esko").src = `https://dict.naver.com/eskodict/#/mini/search?query=${encodedQuery}`;
                 
                 // Update URL without reloading the page
                 history.replaceState(null, "", "?query=" + encodedQuery);
